@@ -26,7 +26,7 @@
   width: var(--calculator-size);
   margin: 20px;
   border-radius: var(--radius-ms);
-  box-shadow: 2px 2px 5px 0px var(--shadow-color), -2px 2px 5px 0px var(--shadow-color), 0px 2px 5px 0px var(--shadow-color);
+  box-shadow: 2px 2px 5px 0px var(--shadow-color), -2px 4px 5px 0px var(--shadow-color), 0px 2px 5px 0px var(--shadow-color);
   overflow: hidden;
   background-color: rgb(68, 74, 85);
 }
