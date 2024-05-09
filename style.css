@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --shadow-color: rgba(196, 195, 195, 0.5);
+  --radius-ms: 15px;
+  --calculator-size: 500px;
+  --factor-bg-color: rgb(201, 217, 225);
+}
+
+.calculator {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: calc(var(--calculator-size) / 6);
+  grid-template-areas: 
+    "header header header header"
+    "plus minus multiplication divide"
+    "seven eight nine equal"
+    "four five six equal"
+    "one two three equal"
+    "zero-position coma ac equal"
+  ;
+  height: var(--calculator-size);
+  width: var(--calculator-size);
+  margin: 20px;
+  border-radius: var(--radius-ms);
+  box-shadow: 2px 2px 5px 0px var(--shadow-color), -2px 2px 5px 0px var(--shadow-color), 0px 2px 5px 0px var(--shadow-color);
+  overflow: hidden;
+  background-color: rgb(68, 74, 85);
+}
+
+.no-left {
+  border-left: 0;
+}
+
+.no-right {
+  border-right: 0;
+}
+
+.no-bottom {
+  border-bottom: 0;
+}
+
+header {
+  grid-area: header;
+  justify-self: right;
+  gap: 0;
+  align-self: center;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 47px;
+  margin-right: 10px;
+  color: white;
+  font-weight: 400;
+}
+
+button {
+  place-self: center;
+  border: 1px solid rgb(124, 139, 157);
+  width: 100%;
+  height: 100%;
+  background-color: rgb(241, 248, 252);
+  font-size: 33px;
+}
+
+.plus {
+  grid-area: plus;
+  background-color: var(--factor-bg-color);
+}
+
+.minus {
+  grid-area: minus;
+  background-color: var(--factor-bg-color);
+}
+
+.multiply {
+  grid-area: multiplication;
+  background-color: var(--factor-bg-color);
+}
+
+.divide {
+  grid-area: divide;
+  background-color: var(--factor-bg-color);
+}
+
+.zero {
+  grid-area: zero-position;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.coma {
+  grid-area: coma;
+}
+
+.ac {
+  grid-area: ac;
+}
+
+.equal {
+  grid-area: equal;
+  background-color: rgb(229, 111, 111);
+}
